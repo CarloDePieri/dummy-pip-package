@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "dummy-pip-package"
+version = "1.0.0"
+description = "A dummy package with no dependencies used for testing."
+authors = ["Carlo De Pieri <depieri.carlo@gmail.com>"]
+license = "GPL3"
+readme = "README.md"
+repository = "https://github.com/CarloDePieri/dummy-pip-package"
+homepage = "https://github.com/CarloDePieri/dummy-pip-package"
+
+packages = [{include = "dummy_pip_package"}]
+
+keywords = ["python", "dummy", "pip", "package"]
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Testing",
+  "Topic :: Software Development :: Testing :: Mocking",
+]
+
+[tool.poetry.scripts]
+dummy-pip-package = 'dummy_pip_package.main:dummy'
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
